@@ -30,14 +30,14 @@ function Series() {
             <div className='flex items-center justify-between text-white px-2 md:px-24 bg-slate-800 h-11 shadow-lg shadow-black'>
                 <h2 className='text-lg'>Popular Series</h2>
             </div>
-            <div className='grid grid-cols-2 md:grid-cols-4 mt-8 px-2 md:px-24 gap-14'>
+            <div className='grid grid-cols-2 md:grid-cols-4 mt-8 px-2 md:px-24 gap-11'>
                 {
                     movies &&
 
-                        movies.filter(movie => movie.programType === 'movie').map(movie =>                          
+                        movies.filter(movie => movie.programType === 'series').map(movie =>                          
                             
                             <div className='content-center border shadow-md w-40 h-64'>
-                                <img className='w-full h-full object-cover' src={movie.url} alt="" />
+                                <img className='w-full h-full object-cover' src={movie.images['Poster Art'].url} alt="" />
                                 <h3>{movie.title}</h3>
                             </div>
                    )
