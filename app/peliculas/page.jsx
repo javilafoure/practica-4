@@ -36,7 +36,7 @@ function Peliculas() {
 
                         movies.filter(movie => movie.programType === 'movie').map(movie =>                          
                             
-                            <div className='content-center border shadow-md w-40 h-64'>
+                            <div key={movie.id} className='content-center border shadow-md w-40 h-64'>
                                 <img className='w-full h-full object-cover' src={movie.images['Poster Art'].url} alt="" />
                                 <h3>{movie.title}</h3>
                             </div>
